@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+svg {
+    width: 15px;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.interface-login {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.div-login {
+    border: 1px solid #e7d666;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 10px;
+    border-radius: 15px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.input {
+    width: 250px;
+    border-bottom: 1px solid #fff;
+}
+
+.input input {
+    height: 40px;
+    width: 96%;
+    border: none;
+    padding-left: 10px;
+    background: none;
+    color: #fff;
+}
+
+.email {
+    position: relative;
+}
+
+.email svg {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    right: 10px;
+}
+
+.password {
+    position: relative;
+    margin-top: 15px;
+}
+
+.password svg {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    right: 10px;
+}
+
+::placeholder {
+    color: #fff;
+    border-color: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.signUpBtn{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.signUpBtn:hover{
+    color: #e7d666;
+    transition: all 0.2s ease;
+}
+
+.login-btn:hover{
+    transition: all 0.2s ease;
+    opacity: 0.8;
+}
+
+.login-btn{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+    font-weight: bold;
+    border: none;
+    background-color: #e7d666;
+}
+
+
+
+

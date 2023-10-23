@@ -1,0 +1,368 @@
+/* Reset css */
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+.app-container {
+    position: relative;
+    /* top: 25px; */
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 100vh;
+    background-color: #3d3e3e;
+}
+
+.app-container::-webkit-scrollbar {
+    width: 0px;
+    display: none;
+}
+
+/* Header */
+.header {
+    display: flex;
+    background-color: #3d3e3e;
+    height: 80px;
+    max-width: 100%;
+    padding: 0 47px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+}
+
+.header .logo {
+    flex: 1;
+    color: #e7d666;
+    font-weight: 800;
+    font-size: 38px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header .input {
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 26px;
+}
+
+.input-text {
+    width: 70%;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    outline: none;
+    border-right-color: #212121;
+    border-bottom-color: #212121;
+}
+
+.header .input>i {
+    align-items: center;
+    display: flex;
+    margin-left: -30px;
+}
+
+.header .tv-shows {
+    flex: 1.5;
+    margin: 0 auto;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header .movies {
+    flex: 0.5;
+    text-align: center;
+    margin-left: -60px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header .account-management {
+    flex: 5;
+    gap: 6px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 18px;
+    height: 80px;
+}
+
+/* Account */
+.account-management-icon {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    cursor: pointer;
+}
+
+.logout, .account{
+    text-decoration: none;
+    color: #fff;
+}
+
+.account-management-icon>span {
+    padding: 0 8px;
+}
+
+.account-management-icon:hover .account-list {
+    display: block;
+}
+
+.account-list {
+    padding-left: 0;
+    list-style: none;
+    position: absolute;
+    right: 39px;
+    height: 120px;
+    top: calc(100% - 18px);
+    z-index: 2;
+    transform-origin: calc(100%-20px) top;
+    animation: accountGrowth ease-in-out 0.2s;
+    will-change: opacity, transform;
+    display: none;
+}
+
+@keyframes accountGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.account-list>li {
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(16, 16, 16);
+}
+
+.account-management-icon>ul>li>i {
+    position: absolute;
+    right: -14px;
+    line-height: 60px;
+    color: rgb(16, 16, 16);
+}
+
+.account-list::before {
+    content: "";
+    display: block;
+    border-width: 6px 7px;
+    border-style: solid;
+    border-color: transparent transparent #1d7a7a transparent;
+    position: absolute;
+    right: calc(100% - 70%);
+    top: -12px;
+}
+
+.account-management-icon>ul>li:hover .color-white, .account-management-icon>ul>li>a:hover .color-white {
+    color: #fff;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.account-management-icon>ul>li:hover {
+    transition: all 0.3s ease;
+    background-color: #1d7a7a;
+}
+
+.border-color-tb {
+    border-top-color: 2px solid #fff;
+}
+
+.movies:hover,
+.tv-shows:hover {
+    color: #e7d666;
+    transition: all 0.3s ease;
+}
+
+.account-management i,
+.account-management span {
+    cursor: pointer;
+}
+
+.user {
+    height: 32px;
+    width: 34px;
+    background-color: #e7d666;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.user>i {
+    margin-left: -1.5px;
+}
+
+.account-management i:last-child:hover {
+    transition: all 0.3s ease;
+    transform: scale(0.8);
+}
+
+.angle-down {
+    padding-top: 2px;
+}
+
+.account-management-icon:hover .angle-down {
+    display: none;
+}
+
+/* Content */
+.content{
+    position: relative;
+    top: 44px;
+    width: 100%;
+    margin-top: -19px;
+    background-color: #f7f1b3;
+}
+
+.container-account{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 100px auto;
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.heading-account{
+    font-size: 26px;
+    color: #155555;
+    font-weight: 600;
+    margin: 35px auto 0;
+}
+
+.account-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-info{
+    font-size: 24px;
+    padding: 5px 30px 0;
+}
+
+.account-info label{
+   padding: 10px 30px;
+}
+
+.sperator{
+    margin: 20px 0;
+    height: 3px;
+    background-color: #155555;
+    width: 100%;
+}
+
+.change-password{
+    display: flex;
+    flex-direction: column;
+    margin: -12px 30px 0;
+}
+
+.heading-change-password{
+    font-size: 24px;
+    padding-bottom: 8px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input{
+   width: 72%;
+   height: 36px;
+   margin: 20px 0;
+   border-radius: 5px;
+   border: 1px solid #155555;
+}
+
+.change-password button{
+    width: 12%;
+    height: 33px;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #067474;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.change-password button:hover{
+    opacity: 0.86;
+    transition: all 0.1s ease;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    color: #bdbdbd;
+    font-size: 14px;
+    margin: 60px 0;
+}
+
+.heading-footer {
+    font-size: 18px;
+    font-weight: 600;
+    padding-top: 20px;
+    margin-left: 300px;
+}
+
+.footer-content-item p {
+    font-weight: 300;
+}
+
+.footer-content-list {
+    display: flex;
+    margin-left: 300px;
+}
+
+.footer-content-item {
+    margin-right: 160px;
+}
+
+.support {
+    height: 50px;
+    width: 90px;
+    cursor: pointer;
+    margin-bottom: 35px;
+    margin-right: 40px;
+    position: absolute;
+    right: 0;
+    margin-top: 160px;
+}
+
+.support-img {
+    height: 60px;
+    width: 100px;
+    background-color: aqua;
+    border-radius: 50%;
+}

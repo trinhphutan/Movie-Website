@@ -1,0 +1,77 @@
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(103, 97, 78), rgb(63, 63, 57));
+}
+
+.container{
+    background-color: aliceblue;
+    border: 2px solid darkgreen;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+.container-resend{
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-resend{
+    color: darkgreen;
+    font-size: 30px;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label{
+    padding-bottom: 10px;
+    color: #bca707;
+    font-weight: bold;
+}
+
+.form-group input{
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(79, 176, 208, 0.3);
+}
+
+.resend-email-btn{
+    margin-top: 30px;
+    margin-left: 40%;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    background-color: #0c830c;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.resend-email-btn span{
+    font-weight: bold;
+}
+
+.resend-email-btn:hover{
+    opacity: 0.9;
+    transition: all 0.1s ease;
+    transform: scale(0.97);
+}
